@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlirtApp - Rencontrez des célibataires près de chez vous</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="logo-3d">Pona Ekolo Dating</div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="loading-message">
+        Chargement de votre expérience de rencontre...
+      </div>
+      <div class="text-white text-sm mt-8">Made by Pona Ekolo</div>
+    </div>
+
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+      <div class="splash-logo heart-beat">Pona Ekolo Dating</div>
+      <div class="splash-text">Trouvez votre match parfait</div>
+    </div>
+
+    <!-- Match Modal -->
+    <div class="match-modal">
+      <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 text-center">
+        <div class="text-4xl text-pink-500 mb-4">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h2 class="text-2xl font-bold mb-2">C'est un match !</h2>
+        <p class="text-gray-600 mb-6">
+          Vous et <span class="font-bold match-name">Sophie</span> avez aimé vos
+          profils respectifs.
+        </p>
+        <div class="flex justify-center space-x-4 mb-6">
+          <img
+            src="https://raw.githubusercontent.com/ChristND242/PE-logo/refs/heads/main/png/logo-white.png"
+            alt="Profile 1"
+            class="w-20 h-20 rounded-full border-4 border-pink-500"
+          />
+          <img
+            src="https://randomuser.me/api/portraits/women/33.jpg"
+            alt="Profile 2"
+            class="w-20 h-20 rounded-full border-4 border-pink-500"
+          />
+        </div>
+        <button
+          class="gradient-bg text-white py-3 px-6 rounded-full font-medium w-full mb-3"
+        >
+          Envoyer un message
+        </button>
+        <button
+          class="bg-gray-200 text-gray-700 py-3 px-6 rounded-full font-medium w-full close-match-modal"
+        >
+          Continuer à swiper
+        </button>
+      </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app-container hidden">
+      <!-- Header -->
+      <header class="gradient-bg text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fas fa-fire text-2xl mr-2"></i>
+            <h1 class="text-xl font-bold">Pona Ekolo Dating</h1>
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-search text-xl"></i>
+            <i class="fas fa-user-circle text-2xl"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="container mx-auto p-4 pb-24">
+        <!-- Card Stack -->
+        <div class="max-w-md mx-auto relative" style="height: 600px">
+          <div class="card-container absolute w-full h-full">
+            <!-- Cards will be inserted here by JavaScript -->
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 flex justify-center space-x-6 mb-4"
+          >
+            <button class="action-btn dislike-btn" id="dislike-btn">
+              <i class="fas fa-times"></i>
+            </button>
+            <button class="action-btn super-like-btn">
+              <i class="fas fa-star"></i>
+            </button>
+            <button class="action-btn like-btn" id="like-btn">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Navigation -->
+      <nav
+        class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200"
+      >
+        <div class="container mx-auto flex justify-around">
+          <a href="#" class="nav-item active">
+            <i class="fas fa-home text-xl"></i>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-search text-xl"></i>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-comment-dots text-xl"></i>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-user text-xl"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
